@@ -1,10 +1,15 @@
 interface ButtonProps {
-  text: string;
   className: string;
+  children: string;
+  onClick: () => void;
 }
 
-function Button({ text, className }: ButtonProps) {
-  return <button className={className}>{text}</button>;
+function Button({ className, children, onClick }: ButtonProps) {
+  return (
+    <button className={"btn " + className} onClick={onClick}>
+      {children}
+    </button>
+  );
 }
 
 export default Button;

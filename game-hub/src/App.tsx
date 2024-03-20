@@ -1,15 +1,32 @@
-import Alert from "./assets/components/Alert";
-import Button from "./assets/components/Button";
+import Like from "./assets/components/Like";
 
 function App() {
   return (
-    <div>
-      <Alert>
-        <span>Hello World</span>
-      </Alert>
-      <Button text="Click me" className="btn btn-primary" />
-    </div>
+    <>
+      <Like onClick={() => console.log("Clicked")} />
+    </>
   );
+  // const items = ["Item 1", "Item 2", "Item 3"];
+  // return (
+  //   <>
+  //     <ListGroup
+  //       items={items}
+  //       heading="My List"
+  //       onSelectItem={(item) => console.log(item)}
+  //     />
+  //   </>
+  // );
+  // const [alertVisible, setAlertVisible] = useState(false);
+  // return (
+  //   <div>
+  //     {alertVisible && (
+  //       <Alert onClose={() => setAlertVisible(false)}>My alert</Alert>
+  //     )}
+  //     <Button onClick={() => setAlertVisible(true)} className="btn-primary">
+  //       {"Click Me"}
+  //     </Button>
+  //   </div>
+  // );
 }
 
 export default App;
