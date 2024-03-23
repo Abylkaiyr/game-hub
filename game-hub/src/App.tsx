@@ -1,32 +1,25 @@
-import Like from "./assets/components/Like";
+import { useState } from "react";
+import Expandable from "./assets/components/Expandable";
+import Button from "./assets/components/Button";
 
 function App() {
+  const [expandable, setExpandable] = useState(false);
+  const text =
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo voluptas nesciunt distinctio assumenda itaque! Voluptatibus dolore, blanditiis deserunt mollitia incidunt unde aperiam tempora, molestias porro facilis at expedita dolorem nobis ad harum voluptatum ab fugiat consequuntur nesciunt qui officiis id reprehenderit! Soluta voluptatibus reiciendis cum, in accusamus dolorem omnis fuga?";
+
+  const handleClick = () => {
+    console.log("clicked more");
+    setExpandable(!expandable);
+  };
+
   return (
     <>
-      <Like onClick={() => console.log("Clicked")} />
+      <Expandable text={text} textlength={50} expandable={expandable} />
+      <Button className="btn-primary" onClick={handleClick}>
+        {expandable ? "Less" : "More"}
+      </Button>
     </>
   );
-  // const items = ["Item 1", "Item 2", "Item 3"];
-  // return (
-  //   <>
-  //     <ListGroup
-  //       items={items}
-  //       heading="My List"
-  //       onSelectItem={(item) => console.log(item)}
-  //     />
-  //   </>
-  // );
-  // const [alertVisible, setAlertVisible] = useState(false);
-  // return (
-  //   <div>
-  //     {alertVisible && (
-  //       <Alert onClose={() => setAlertVisible(false)}>My alert</Alert>
-  //     )}
-  //     <Button onClick={() => setAlertVisible(true)} className="btn-primary">
-  //       {"Click Me"}
-  //     </Button>
-  //   </div>
-  // );
 }
 
 export default App;
