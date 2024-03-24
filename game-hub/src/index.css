@@ -1,0 +1,11 @@
+body {
+     padding: 20px;
+}
+
+.expense {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-start;
+     gap: 20px;
+}
