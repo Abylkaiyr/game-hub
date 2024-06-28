@@ -3,10 +3,6 @@ import { GameQuery } from "../App";
 import APIClient, { FetchResponse } from "../services/api-client";
 import { Platform } from "./usePlatforms";
 
-
-
-
-
 export interface Game {
   id: number;
   name: string;
@@ -17,8 +13,6 @@ export interface Game {
 }
 
 const apiClient = new APIClient<Game>("/games");
-
-
 
 const useGames = (gameQuery: GameQuery) => useQuery<FetchResponse<Game>, Error>(
   {
