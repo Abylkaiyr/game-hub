@@ -3,12 +3,7 @@ import APIClient from "../services/api-client";
 import ms from "ms";
 
 import genres from "../assets/data/genres";
-export interface Genre {
-     id: number;
-     name: string;
-     image_background: string;
-}
-
+import { Genre } from "../entities/Genre";
 const apiClient = new APIClient<Genre>("/genres");
 
 const useGenres = () => useQuery({
