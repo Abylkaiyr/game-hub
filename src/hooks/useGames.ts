@@ -5,6 +5,8 @@ import ms from "ms";
 import useGameQueryStore from "../services/store";
 
 export interface Game {
+  publishers: any;
+  genres: any;
   id: number;
   name: string;
   slug: string;
